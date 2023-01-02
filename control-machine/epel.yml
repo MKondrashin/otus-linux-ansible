@@ -1,0 +1,9 @@
+---
+- name: Install EPEL Repo
+  hosts: nginx
+  become: true
+  tasks:
+    - name: Install Epel Repo
+      yum:
+        name: epel-release
+        state: present
